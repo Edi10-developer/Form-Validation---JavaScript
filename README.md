@@ -1,11 +1,11 @@
 
 # Form Validation
 
-> Form validation with JavaScript, this is IT Academy [IT Academy](https://itacademy.barcelonactiva.cat/) Exercise
+> Form validation with JavaScript, this is [IT Academy](https://itacademy.barcelonactiva.cat/) Exercise
 
 ## Live Demo
 
-[Live Site](https://product-app-js.netlify.app/)
+[Live Site](https://.netlify.app/)
 
 ### View:
 
