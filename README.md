@@ -9,7 +9,11 @@
 
 ### View:
 
-![Image](./img/model.png)
+ **Form**
+![Image](./img/form.png)
+
+ **Validation**
+![Image](./img/validation.png)
 
 
 ## Built With
