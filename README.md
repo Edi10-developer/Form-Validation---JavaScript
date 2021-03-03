@@ -5,7 +5,7 @@
 
 ## Live Demo
 
-[Live Site](https://.netlify.app/)
+[Live Site](https://product-app-js.netlify.app/)
 
 ### View:
 

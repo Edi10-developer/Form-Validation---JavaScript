@@ -1,36 +1,32 @@
+
+// Form Validation
 function validateForm() {
+    // Form's values
     let email = document.getElementById('email').value;
     let password = document.getElementById('password').value;
     let repeatPassword = document.getElementById('repeatPassword').value;
 
-    /*
+    // Checking form's values
     let validEmail = ValidateEmail(email);
     let validPassword = ValidatePassword(password);
-    let validRepeatPassword = ValidateRepeatPassword(password);
+    let validRepeatPassword = ValidateRepeatPassword(password, repeatPassword);
 
-    
+    // If checking was good SUBMIT FORM
     if (validEmail && validPassword && validRepeatPassword) {
-        window.location = "validation.html"; // Redirecting to other page.
+        document.querySelector('#myForm').submit();
     }
-    */
-   let valid = false;
-   const regexEmail = /\S+[a-z0-9]@[a-z0-9\.]+/;
-   if(!regexEmail.test(email)){
-    document.getElementById('mailError').style.display = 'block';
-   }else{
-       valid = true;
-   }
-
 };
+
 
 // Email
 function ValidateEmail(email) {
-    const regexEmail = /\S+[a-z0-9]@[a-z0-9\.]+/;
-    if (regexEmail.test(email)) {
+    const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (email.match(regexEmail)) {
         return true
+    } else {
+        document.getElementById('mailError').style.display = 'block';
+        return (false)
     }
-    document.getElementById('mailError').style.display = 'block';
-    return (false)
 };
 
 
@@ -45,8 +41,8 @@ function ValidatePassword(password) {
 
 
 // Repeat Password
-function ValidateRepeatPassword(password) {
-    if (password !== document.getElementById('repeatPassword')) {
+function ValidateRepeatPassword(password, repeatPassword) {
+    if (password !== repeatPassword) {
         document.getElementById('repeatPasswordError').style.display = 'block';
         return (false)
     }

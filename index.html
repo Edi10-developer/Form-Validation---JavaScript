@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Validation</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <!--Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-</head>
-<body>
-    <div class="container col-md-12 m-4">
 
-        <form id="myForm"  class="form col-md-8 m-auto pt-5">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+</head>
+
+<body class="bg-secondary">
+    <div class="container col-md-8 p-4 pb-4 m-auto mt-5 bg-light">
+        <h2 class="text-secondary text-center">
+            Login Form Validation
+        </h2>
+        <form id="myForm" action="validation.html" method="POST" class="form col-md-6 m-auto pt-5">
             <div class="form-group">
                 <label>Email</label>
-                <input type="email" id="email" name="email" min='3' class="form-control"/>
-                <p class="is-invalid text-danger " id="mailError">Please fill the field wiyh correct email</p>
+                <input type="email" id="email" min="3" class="form-control" />
+                <p class="is-invalid text-danger" id="mailError">
+                    Please fill the field wiyh correct email
+                </p>
             </div>
             <div class="form-group">
                 <label>Password</label>
-                <input type="password" min='8' id="password" class="form-control"/>
-                <p class="is-invalid text-danger" id="passwordError">The passord is not valid</p>
+                <input type="password" min="8" id="password" class="form-control" />
+                <p class="is-invalid text-danger" id="passwordError">
+                    The passord is not valid
+                </p>
             </div>
             <div class="form-group">
                 <label>Repeat password</label>
-                <input type="password" min='8' id="repeatPassword" class="form-control"/>
-                <p class="is-invalid text-danger"id="repeatPasswordError">The passords don't match</p>
+                <input type="password" min="8" id="repeatPassword" class="form-control" />
+                <p class="is-invalid text-danger" id="repeatPasswordError">
+                    The passords don't match
+                </p>
             </div>
-            <input id="enter" type="submit" class="btn btn-secondary col-md-4 m-auto" value="Enter" onsubmit="return validateForm();"/>
+            <input id="enter" type="button" class="btn btn-secondary col-md-4 m-auto mb-5 mt-3" value="Enter"
+                onclick="validateForm();" />
         </form>
-
     </div>
     <script src="main.js"></script>
 </body>
+
 </html>
